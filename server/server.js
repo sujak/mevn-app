@@ -8,7 +8,7 @@ const isDev = NODE_ENV !== 'production';
 const port = PORT || 5000;
 
 // Set up Mongoose
-mongoose.connect(ATLAS_URI, { useNewUrlParser: true, useCreateIndex: true, useFindAndModify: false });
+mongoose.connect(ATLAS_URI);
 mongoose.connection.once('open', () => console.log('MongoDB database connection established successfully!'));
 
 // Set up middleware
